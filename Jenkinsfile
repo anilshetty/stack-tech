@@ -32,9 +32,9 @@ pipeline {
 
         stage ('SonarQube Analysis') {
           steps{
-            withSonarQubeEnv('local-server') {
-                sh 'mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar'
-            }
+              
+              sh 'echo sonaring'
+            
           }
 
           post {
