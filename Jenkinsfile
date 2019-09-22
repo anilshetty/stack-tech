@@ -48,7 +48,7 @@ pipeline {
           steps {
             wrap([$class: 'AnsiColorBuildWrapper', colorMapName: "xterm"]) {
               ansiblePlaybook(
-                playbook: 'playbook.yml',
+                playbook: 'playbook1.yml',
                 colorized: true)
             }
           }
