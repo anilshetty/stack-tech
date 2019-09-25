@@ -4,7 +4,12 @@ pipeline {
     
 
     stages {
-        
+        stage ('change user'){
+            steps {
+                sh 'sudo su'
+            }
+            
+        }
         
         
 
