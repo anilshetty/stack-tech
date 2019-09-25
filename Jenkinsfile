@@ -8,9 +8,9 @@ pipeline {
         stage ('print user') {
             
             steps { 
-                wrap([$class: 'BuildUser']) {
-          sh 'echo "${BUILD_USER}"'
-        }
+               
+          sh 'echo "${env.BUILD_USER}"'
+        
             }
         }
         
