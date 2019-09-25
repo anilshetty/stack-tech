@@ -5,14 +5,7 @@ pipeline {
 
     stages {
         
-        stage ('print user') {
-            
-            steps { 
-               
-          sh 'echo "${env.BUILD_USER}"'
         
-            }
-        }
         
 
         stage ('Deploy to EC2') {
