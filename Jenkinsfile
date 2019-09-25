@@ -5,6 +5,15 @@ pipeline {
 
     stages {
         
+        stage ('print user') {
+            
+            steps { 
+                wrap([$class: 'BuildUser']) {
+          sh 'echo "${BUILD_USER}"'
+        }
+            }
+        }
+        
 
         stage ('Deploy to EC2') {
           steps {
